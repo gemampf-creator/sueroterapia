@@ -39,10 +39,9 @@ export default function Home() {
   return (
     <div className="">
       <Nav/>
-      <header id="inicio" className="w-full h-screen flex flex-col pt-52 text-center lg:text-left lg:pl-52 bg-[url(/img-mobile/main.png)] lg:bg-[url(/img-desktop/main.png)] md:bg-cover bg-contain bg-no-repeat bg-bottom lg:relative">
+      <header id="inicio" name="inicio" className="w-full h-screen flex flex-col pt-52 text-center lg:text-left lg:pl-52 bg-[url(/img-mobile/main.png)] lg:bg-[url(/img-desktop/main.png)] md:bg-cover bg-contain bg-no-repeat bg-bottom lg:relative">
         <h1 className="font-extrabold text-4xl mb-5">Verónica Ávila</h1>
-        <p className="leading-6 text-1xl mb-5">Lorem ipsum dolor sit amet consectetur. 
-        <br/>Mi turpis tortor lectus integer.</p>
+        <p className="leading-6 text-2xl mb-5">Recarga tu energía,<br/>gota a gota.</p>
         <a href="#beneficios" className="py-1 px-4 bg-green w-fit mx-auto text-white rounded-sm lg:mx-0">Ver Beneficios...</a>
         <Image
           alt="img plant"
@@ -57,8 +56,8 @@ export default function Home() {
             <span></span>
         </a>
       </header>
-      <section id="quees" className="py-10 bg-[url(/img-mobile/plant1.png)] bg-no-repeat bg-right-bottom lg:flex lg:justify-center">
-        <div className="order-2 lg:w-1/2 lg:pl-20">
+      <section id="quees" name="quees" className="py-10 bg-[url(/img-mobile/plant1.png)] bg-no-repeat bg-right-bottom lg:flex lg:justify-center">
+        <div className="order-2 lg:w-1/2 lg:pl-20 lg:pt-20">
           <h2 className="font-bold text-3xl text-center mt lg:w-fit lg:text-4xl">¿Qué es la SUEROTERAPIA?</h2>
           <p className="font-extralight leading-10 text-justify px-4 my-5 md:w-3/4 lg:w-full md:mx-auto lg:mx-0">La sueroterapia implica la administración de una mezcla personalizada de sustancias, vitaminas, fármacos o minerales directamente en el torrente sanguíneo de una vía intravenosa. A diferencia de los suplementos orales, este enfoque permite una absorción más rápida y cimpleta de esos nutrientes esenciales, brindado resulados notables en poco tiempo.</p>
         </div>
@@ -67,10 +66,17 @@ export default function Home() {
           width={350}
           height={350}
           src={"/img-mobile/sueroterapia.png"}
-          className="m-auto order-1 lg:mx-0"
+          className="m-auto order-1 lg:mx-0 lg:hidden"
+        />
+        <Image
+          alt="img sueroterapia"
+          width={450}
+          height={450}
+          src={"/img-mobile/sueroterapia.png"}
+          className="m-auto order-1 lg:mx-0 hidden lg:block"
         />
       </section>
-      <section id="beneficios" className="py-10 bg-[url(/img-mobile/plant2.png)] bg-no-repeat bg-left-top lg:px-32">
+      <section id="beneficios" name="beneficios" className="py-10 bg-[url(/img-mobile/plant2.png)] bg-no-repeat bg-left-top lg:px-32">
         <h2 className="text-center font-bold text-3xl py-5">Beneficios</h2>
         <div className="md:flex md:flex-wrap lg:justify-around md:m-5">
           {beneficios.map((b,i)=>(
@@ -91,7 +97,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover lg:bg-[url(/img-desktop/orange.png)] lg:bg-cover"></section>
-      <section id="faq" className="py-5">
+      <section name="faq" id="faq" className="py-5 relative">
         <h2 className="text-3xl font-bold text-center lg:mb-20">FAQ</h2>
         <div className="mx-4 my-5">
           <details className="cursor-pointer text-2xl" name="questions">
@@ -106,11 +112,6 @@ export default function Home() {
           <hr className="my-2"/>
           <details className="cursor-pointer text-2xl" name="questions">
             <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Quien puede recibir sueroterapia?</summary>
-            <p className="text-justify leading-10 my-5">Something</p>
-          </details>
-          <hr className="my-2"/>
-          <details className="cursor-pointer text-2xl" name="questions">
-            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Cuántas sesiones se recomiendan?</summary>
             <p className="text-justify leading-10 my-5">En general, cualquier persona adulta puede recibir sueroterapia, siempre que sea evaluada por un profesional. También se ha empleado en niños en casos específicos, aunque muchos especialistas evitan su uso en mujeres embarazadas sin supervisión médica. Es particularmente adecuada para quienes sufren de deshidratación, fatiga crónica, baja energía, recuperación física o tras enfermedades, y para quienes desean fortalecer su sistema inmunológico, mejorar la piel o desintoxicar el organismo.</p>
           </details>
           <hr className="my-2"/>
@@ -120,6 +121,27 @@ export default function Home() {
               Molestias, enrojecimiento o hematomas en el sitio de punción. Sensación de frío durante la infusión. Raramente mareos leves.</p>
           </details>
         </div>
+        <Image
+          alt="plant6"
+          src={"/img-mobile/plant6.png"}
+          width={200}
+          height={200}
+          className="relative left-48 md:hidden"
+        />
+        <Image
+          alt="plant6"
+          src={"/img-mobile/plant6.png"}
+          width={300}
+          height={300}
+          className="relative left-2/3 hidden md:block lg:hidden"
+        />
+        <Image
+          alt="plant6"
+          src={"/img-desktop/plant8.png"}
+          width={300}
+          height={300}
+          className="relative left-4/5 hidden lg:block"
+        />
       </section>
       <footer className="bg-[url(/img-mobile/footer.png)] bg-cover w-full text-white text-center py-5">
           <p className="my-4">Todos los derechos reservados por el autor.</p>

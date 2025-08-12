@@ -24,16 +24,16 @@ export default function Nav(){
             <div className="hidden lg:block z-40">
                 <ul className="flex">
                     <li className="mr-20 cursor-pointer">
-                        <a href="#inicios">Inicio</a>
+                        <a href="#inicio" className="text-2xl">Inicio</a>
                     </li>
                     <li className="mr-20 cursor-pointer">
-                        <a href="#quees">¿Qué es?</a>
+                        <a href="#quees" className="text-2xl">¿Qué es?</a>
                     </li>
                     <li className="mr-20 cursor-pointer">
-                        <a href="#beneficios">Beneficios</a>
+                        <a href="#beneficios" className="text-2xl">Beneficios</a>
                     </li>
                     <li className="mr-20 cursor-pointer">
-                        <a href="#faq">FAQ</a>
+                        <a href="#faq" className="text-2xl">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -46,22 +46,22 @@ export default function Nav(){
                 <ul id="menu" className="text-center">
                     <li className="my-10">
                         <a href="#inicio">
-                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">Inicio</label>
+                            <label htmlFor="inicio" onClick={toggleMenu} className="text-2xl font-bold">Inicio</label>
                         </a>
                     </li>
                     <li className="my-10">
                         <a href="#quees">
-                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">¿Qué es?</label>
+                            <label htmlFor="quees" onClick={toggleMenu} className="text-2xl font-bold">¿Qué es?</label>
                         </a>
                     </li>
                     <li className="my-10">
                         <a href="#beneficios">
-                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">Beneficios</label>
+                            <label htmlFor="beneficios" onClick={toggleMenu} className="text-2xl font-bold">Beneficios</label>
                         </a>
                     </li>
                     <li className="my-10">
                         <a href="#faq">
-                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">FAQ</label>
+                            <label htmlFor="faq" onClick={toggleMenu} className="text-2xl font-bold">FAQ</label>
                         </a>
                     </li>
                 </ul>

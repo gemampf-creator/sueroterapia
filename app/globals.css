@@ -14,6 +14,12 @@
   --color-green: #344A3D;
 }
 
+@font-face {
+  font-family: "Itim";
+  src: url("../public/fonts/Itim-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
  font-family: Arial, Helvetica, sans-serif;
 }
@@ -33,7 +39,7 @@ hr{
 }
 
 p, h1,h2, button, li{
-    font-family: "Itim", cursive;
+    font-family: "Itim", sans-serif;
 }
 
 p{
