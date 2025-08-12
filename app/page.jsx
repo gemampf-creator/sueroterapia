@@ -118,7 +118,6 @@ export default function Home() {
       </section>
       <footer className="bg-[url(/img-mobile/footer.png)] bg-cover w-full text-white text-center py-5">
           <p className="my-4">Todos los derechos reservados por el autor.</p>
-          <p className="my-4">correo@gmail.com</p>
           <p className="my-4">Terapeuta Véronica Ávila.</p>
       </footer>
     </div>

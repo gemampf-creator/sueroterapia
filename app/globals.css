@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FFF8EE;
+    --background: #000000;
     --foreground: #FFF8EE;
   }
 }
@@ -33,7 +33,7 @@ html{
 
 nav.sticky{
   padding: 5px 10px;
-  background: rgb(255, 115, 0);
+  background: #ffd991;
   transition: all .5s ease-in-out;
 }
 
