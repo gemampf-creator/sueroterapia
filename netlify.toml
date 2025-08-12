@@ -1,0 +1,12 @@
+    [build]
+      command = "npm run build" # Or "npm run build"
+      publish = ".next" # Or your specific publish directory
+
+    [build.environment]
+      NODE_VERSION = "18" # Or your desired Node.js version
+
+    [build.cache]
+      paths = [
+        "node_modules/**/*",
+        ".next/cache/**/*"
+      ]
