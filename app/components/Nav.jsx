@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Nav(){
 
@@ -7,36 +7,61 @@ export default function Nav(){
 
     const toggleMenu = ()=> setIsOpen(!isOpen);
 
-    const closeMenu = ()=> setIsOpen(false)
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar')
+            if(window.scrollY > 0){
+                nav.classList.add('sticky')
+            }else{
+                nav.classList.remove('sticky')
+            }
+        })
+    },[])    
 
     return(
-        <nav className="flex">
-            <p>SueroTerapia</p>
-            <div id="menuToggle">
+        <nav id="navbar" className="fixed top-0 left-0 flex justify-between lg:justify-start px-4 py-4 w-full lg:pt-10 lg:pl-10 z-50">
+            <p className="z-40 font-bold text-2xl lg:mr-56">SueroTerapia</p>
+            <div className="hidden lg:block z-40">
+                <ul className="flex">
+                    <li className="mr-20 cursor-pointer">
+                        <a href="">Inicio</a>
+                    </li>
+                    <li className="mr-20 cursor-pointer">
+                        <a href="">¿Qué es?</a>
+                    </li>
+                    <li className="mr-20 cursor-pointer">
+                        <a href="">Beneficios</a>
+                    </li>
+                    <li className="mr-20 cursor-pointer">
+                        <a href="">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="menuToggle" className="md:hidden">
                 <input type="checkbox" name="" id="menuCheckbox" />
                 <span></span>
                 <span></span>
                 <span></span>
 
-                <ul id="menu">
-                    <li>
+                <ul id="menu" className="text-center">
+                    <li className="my-10">
                         <a href="">
-                            <label htmlFor="menuCheckbox" onClick={this.parentNode.click()}>Inicio</label>
+                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">Inicio</label>
                         </a>
                     </li>
-                    <li>
+                    <li className="my-10">
                         <a href="">
-                            <label htmlFor="menuCheckbox" onClick={`this.parentNode.click();`}>¿Qué es?</label>
+                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">¿Qué es?</label>
                         </a>
                     </li>
-                    <li>
+                    <li className="my-10">
                         <a href="">
-                            <label htmlFor="menuCheckbox" onClick={`this.parentNode.click();`}>Beneficios</label>
+                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">Beneficios</label>
                         </a>
                     </li>
-                    <li>
+                    <li className="my-10">
                         <a href="">
-                            <label htmlFor="menuCheckbox" onClick={`this.parentNode.click();`}>FAQ</label>
+                            <label htmlFor="menuCheckbox" onClick={toggleMenu} className="text-2xl font-bold">FAQ</label>
                         </a>
                     </li>
                 </ul>

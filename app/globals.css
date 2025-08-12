@@ -27,11 +27,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+nav.sticky{
+  padding: 5px 10px;
+  background: rgb(255, 115, 0);
+  transition: all .5s ease-in-out;
+}
+
 hr{
   border-style: linear-gradient(90deg, #FFF 0%, #344A3D 100%);
 }
 
-p, h1, button{
+p, h1,h2, button, li{
     font-family: "Itim", cursive;
 }
 
@@ -42,7 +52,6 @@ p{
 /* MENÚ HAMBURGUER */
 #menuToggle
 {
-  display: block;
   /* You can also use relative/absolute here if you want to stay on the top */
   position: relative;
   
@@ -94,7 +103,7 @@ p{
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: #007213;
   border-radius: 3px;
   
   z-index: 1;
@@ -124,7 +133,7 @@ p{
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #007213;
 }
 
 /*
@@ -154,14 +163,15 @@ p{
   max-width: 400px;
   width: 100vw;
   max-height: 100vh;
-  margin: -100px 0 0 -50px;
+  margin: -42px 0 0 -342px;
   padding: 50px;
   padding-top: 125px;
   box-sizing: border-box;
   overflow-y: auto;
-  background: #ededed;
+  background: #ffd991;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
   /* to stop flickering of text in safari */
   
   transform-origin: 0% 0%;
@@ -187,4 +197,12 @@ p{
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+summary::marker{
+  color: orange;
+}
+
+.plan-float{
+  bottom: -70px;
 }

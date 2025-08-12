@@ -38,27 +38,36 @@ export default function Home() {
 
   return (
     <div className="">
-      {/* <Nav/> */}
-      <header className="w-full h-screen flex flex-col pt-52 text-center bg-[url(/img-mobile/main.png)] bg-contain bg-no-repeat bg-bottom">
+      <Nav/>
+      <header className="w-full h-screen flex flex-col pt-52 text-center lg:text-left lg:pl-52 bg-[url(/img-mobile/main.png)] lg:bg-[url(/img-desktop/main.png)] md:bg-cover bg-contain bg-no-repeat bg-bottom lg:relative">
         <h1 className="font-extrabold text-4xl mb-5">Verónica Ávila</h1>
         <p className="leading-6 text-1xl mb-5">Lorem ipsum dolor sit amet consectetur. 
         <br/>Mi turpis tortor lectus integer.</p>
-        <button className="py-1 px-4 bg-green w-fit mx-auto text-white rounded-sm">Ver Beneficios...</button>
+        <button className="py-1 px-4 bg-green w-fit mx-auto text-white rounded-sm lg:mx-0">Ver Beneficios...</button>
+        <Image
+          alt="img plant"
+          width={400}
+          height={700}
+          src={"/img-desktop/plant5.png"}
+          className="absolute left-1/4 hidden lg:block plan-float"
+        />
       </header>
-      <section className="py-10 bg-[url(/img-mobile/plant1.png)] bg-no-repeat bg-right-bottom">
-        <h2 className="font-bold text-3xl text-center mt">¿Qué es la SUEROTERAPIA?</h2>
-        <p className="font-extralight leading-6 text-justify px-4 my-5 md:w-3/4 md:mx-auto">La sueroterapia implica la administración de una mezcla personalizada de sustancias, vitaminas, fármacos o minerales directamente en el torrente sanguíneo de una vía intravenosa. A diferencia de los suplementos orales, este enfoque permite una absorción más rápida y cimpleta de esos nutrientes esenciales, brindado resulados notables en poco tiempo.</p>
+      <section className="py-10 bg-[url(/img-mobile/plant1.png)] bg-no-repeat bg-right-bottom lg:flex lg:justify-center">
+        <div className="order-2 lg:w-1/2">
+          <h2 className="font-bold text-3xl text-center mt lg:w-fit lg:text-4xl">¿Qué es la SUEROTERAPIA?</h2>
+          <p className="font-extralight leading-10 text-justify px-4 my-5 md:w-3/4 md:mx-auto lg:mx-0">La sueroterapia implica la administración de una mezcla personalizada de sustancias, vitaminas, fármacos o minerales directamente en el torrente sanguíneo de una vía intravenosa. A diferencia de los suplementos orales, este enfoque permite una absorción más rápida y cimpleta de esos nutrientes esenciales, brindado resulados notables en poco tiempo.</p>
+        </div>
         <Image
           alt="img sueroterapia"
-          width={300}
-          height={300}
+          width={350}
+          height={350}
           src={"/img-mobile/sueroterapia.png"}
-          className="m-auto"
+          className="m-auto order-1 lg:mx-0"
         />
       </section>
-      <section className="py-10 bg-[url(/img-mobile/plant2.png)] bg-no-repeat bg-left-top">
+      <section className="py-10 bg-[url(/img-mobile/plant2.png)] bg-no-repeat bg-left-top lg:px-32">
         <h2 className="text-center font-bold text-3xl py-5">Beneficios</h2>
-        <div className="md:flex md:flex-wrap">
+        <div className="md:flex md:flex-wrap lg:justify-around">
           {beneficios.map((b,i)=>(
           <div key={i} className="bg-green mx-4 rounded-2xl p-5 text-white my-4 max-w-96">
             <div className="flex items-center justify-between mb-4">
@@ -76,36 +85,42 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover"></section>
+      <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover lg:bg-[url(/img-desktop/orange.png)] lg:bg-cover"></section>
       <section className="py-5">
-        <h2 className="text-3xl font-bold text-center">FAQ</h2>
+        <h2 className="text-3xl font-bold text-center lg:mb-20">FAQ</h2>
         <div className="mx-4 my-5">
-          <details className="cursor-pointer text-2xl">
-            <summary>¿Cuánto dura una sesión?</summary>
-            Something
+          <details className="cursor-pointer text-2xl" name="questions">
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Cuánto dura una sesión?</summary>
+            <p>Una sesión típica suele durar entre 30 y 60 minutos, dependiendo del tipo de suero y las necesidades del paciente. En algunos casos, este tipo de terapia puede extenderse hasta 90 minutos, especialmente si se busca mayor relajación durante el proceso. Incluso, fuentes como AARP mencionan que puede durar entre 30 minutos y 2 horas, según el tipo de goteo intravenoso utilizado.</p>
           </details>
           <hr className="my-2"/>
-          <details className="cursor-pointer text-2xl">
-            <summary>¿Es seguro?</summary>
-            Something
+          <details className="cursor-pointer text-2xl" name="questions">
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Es seguro?</summary>
+            <p>Generalmente, la sueroterapia es segura cuando es realizada por profesionales de la salud, con prácticas de higiene y equipos adecuados. Sin embargo, es fundamental que la preparación y administración la realice personal médico capacitado y que los insumos cuenten con registro sanitario, según normativas vigentes.</p>
           </details>
           <hr className="my-2"/>
-          <details className="cursor-pointer text-2xl">
-            <summary>¿Quien puede recibir sueroterapia?</summary>
-            Something
+          <details className="cursor-pointer text-2xl" name="questions">
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Quien puede recibir sueroterapia?</summary>
+            <p>Something</p>
           </details>
           <hr className="my-2"/>
-          <details className="cursor-pointer text-2xl">
-            <summary>¿Cuántas sesiones se recomiendan?</summary>
-            Something
+          <details className="cursor-pointer text-2xl" name="questions">
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Cuántas sesiones se recomiendan?</summary>
+            <p>En general, cualquier persona adulta puede recibir sueroterapia, siempre que sea evaluada por un profesional. También se ha empleado en niños en casos específicos, aunque muchos especialistas evitan su uso en mujeres embarazadas sin supervisión médica. Es particularmente adecuada para quienes sufren de deshidratación, fatiga crónica, baja energía, recuperación física o tras enfermedades, y para quienes desean fortalecer su sistema inmunológico, mejorar la piel o desintoxicar el organismo.</p>
           </details>
           <hr className="my-2"/>
-          <details className="cursor-pointer text-2xl">
-            <summary>¿Teien efectos secundarios?</summary>
-            Something
+          <details className="cursor-pointer text-2xl" name="questions">
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Teien efectos secundarios?</summary>
+            <p>os efectos secundarios suelen ser leves y poco frecuentes, incluyendo:
+              Molestias, enrojecimiento o hematomas en el sitio de punción. Sensación de frío durante la infusión. Raramente mareos leves.</p>
           </details>
         </div>
       </section>
+      <footer className="bg-[url(/img-mobile/footer.png)] bg-cover w-full text-white text-center py-5">
+          <p className="my-4">Todos los derechos reservados por el autor.</p>
+          <p className="my-4">correo@gmail.com</p>
+          <p className="my-4">Terapeuta Véronica Ávila.</p>
+      </footer>
     </div>
   );
 }
