@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Suero terapia y Podología",
-  description: "Suero terapia y Podología",
+  description: "Descubre todo sobre la sueroterapia: beneficios, tipos de sueros, aplicaciones terapéuticas y recomendaciones para mejorar tu salud y bienestar de forma segura y efectiva.",
+  keywords: "salud, sueroterapia, bienestar, medicina, alternativa",
+  locale: "es_Es",
+  type: "website"
 };
 
 export default function RootLayout({ children }) {
