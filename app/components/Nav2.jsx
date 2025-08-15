@@ -29,16 +29,16 @@ export default function Nav2(){
 
             <ul className="ul_links">
                 <li className="li_links">
-                    <a href="#inicio" className="link">Inicio</a>
+                    <a href="#inicio" className="link" htmlFor="menu_hamburguesa">Inicio</a>
                 </li>
                 <li className="li_links">
-                    <a href="#quees" className="link">¿Qué es?</a>
+                    <a href="#quees" className="link" htmlFor="menu_hamburguesa">¿Qué es?</a>
                 </li>
                 <li className="li_links">
-                    <a href="#beneficios" className="link">Beneficios</a>
+                    <a href="#beneficios" className="link" htmlFor="menu_hamburguesa">Beneficios</a>
                 </li>
                 <li className="li_links">
-                    <a href="#faq" className="link">FAQ</a>
+                    <a href="#faq" className="link" htmlFor="menu_hamburguesa">FAQ</a>
                 </li>
             </ul>
         </nav>
