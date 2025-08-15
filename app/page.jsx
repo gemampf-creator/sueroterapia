@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Nav from "./components/Nav";
+import Nav2 from "./components/Nav2"
 
 export default function Home() {
 
@@ -38,7 +39,8 @@ export default function Home() {
 
   return (
     <div className="">
-      <Nav/>
+      {/* <Nav/> */}
+      <Nav2/>
       <header id="inicio" name="inicio" className="w-full h-screen flex flex-col pt-52 text-center lg:text-left lg:pl-52 bg-[url(/img-mobile/main.png)] lg:bg-[url(/img-desktop/main.png)] md:bg-cover bg-contain bg-no-repeat bg-bottom lg:relative">
         <h1 className="font-extrabold text-4xl mb-5">Verónica Ávila</h1>
         <p className="leading-6 text-2xl mb-5">Recarga tu energía,<br/>gota a gota.</p>

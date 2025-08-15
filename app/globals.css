@@ -28,11 +28,7 @@ html{
   scroll-behavior: smooth;
 }
 
-nav.sticky{
-  padding: 5px 10px;
-  background: #ffd991;
-  transition: all .5s ease-in-out;
-}
+
 
 hr{
   border-style: linear-gradient(90deg, #FFF 0%, #344A3D 100%);
@@ -47,9 +43,8 @@ p{
 }
 
 /* MENÚ HAMBURGUER */
-#menuToggle
+/* #menuToggle
 {
-  /* You can also use relative/absolute here if you want to stay on the top */
   position: relative;
   
   z-index: 1;
@@ -83,15 +78,12 @@ p{
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2; 
   
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -122,38 +114,23 @@ p{
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #007213;
 }
-
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -169,7 +146,6 @@ p{
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   height: 100vh;
-  /* to stop flickering of text in safari */
   
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -188,13 +164,10 @@ p{
   cursor: pointer;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
-}
+} */
 
 summary::marker{
   color: orange;
@@ -262,5 +235,104 @@ summary::marker{
     height: 3vw;
     border-bottom: 3px solid rgb(0, 0, 0);
     border-right: 3px solid rgb(0, 0, 0);
+  }
+}
+
+
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  height: 40px;
+  z-index: 100;
+  padding: 0 20px;
+}
+
+.navbar.sticky{
+  background: #ffd991;
+  transition: all .5s ease-in-out;
+}
+
+.list_icon{
+  cursor: pointer;
+}
+
+#menu_hamburguesa{
+  display: none;
+}
+
+.labe_hamburguesa span{
+    display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #000000;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menu_hamburguesa:checked + .ul_links {
+  height: calc(100vh - 40px);
+}
+.navbar input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #007213;
+}
+
+.ul_links{
+  width: 100%;
+  background-color: #ffd991;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  height: 0;
+  overflow: hidden;
+  /* height: calc(100vh - 20px); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  transition: all .3s;
+}
+
+.link{
+  font-size: 3em;
+}
+
+@media screen and (min-width: 768px){
+  .labe_hamburguesa{
+    display: none;
+  }
+
+  .navbar {
+    background-color: #ffd991;
+  }
+
+  .ul_links{
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+    background: none;
+  }
+  .link{
+    font-size: 1.2rem;
+    transition: all .3s;
   }
 }
