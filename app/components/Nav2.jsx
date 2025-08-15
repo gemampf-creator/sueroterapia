@@ -1,7 +1,9 @@
 "use client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function Nav2(){
+
+    const [checked, setChecked] = useState(false)
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -15,6 +17,8 @@ export default function Nav2(){
         })
     },[]) 
 
+    const handleCheck = ()=> setChecked(false)
+
     return(
         <nav className="navbar" id="navbar">
             <h1 className="logo text-2xl">SueroTerapia</h1>
@@ -25,20 +29,20 @@ export default function Nav2(){
                 <span></span></div>
             </label>
 
-            <input type="checkbox" name="" id="menu_hamburguesa"/>
+            <input type="checkbox" name="" id="menu_hamburguesa" checked={checked} onChange={(e)=> setChecked(e.target.checked)}/>
 
             <ul className="ul_links">
                 <li className="li_links">
-                    <a href="#inicio" className="link" htmlFor="menu_hamburguesa">Inicio</a>
+                    <a href="#inicio" className="link" onClick={handleCheck}>Inicio</a>
                 </li>
                 <li className="li_links">
-                    <a href="#quees" className="link" htmlFor="menu_hamburguesa">¿Qué es?</a>
+                    <a href="#quees" className="link" onClick={handleCheck}>¿Qué es?</a>
                 </li>
                 <li className="li_links">
-                    <a href="#beneficios" className="link" htmlFor="menu_hamburguesa">Beneficios</a>
+                    <a href="#beneficios" className="link" onClick={handleCheck}>Beneficios</a>
                 </li>
                 <li className="li_links">
-                    <a href="#faq" className="link" htmlFor="menu_hamburguesa">FAQ</a>
+                    <a href="#faq" className="link" onClick={handleCheck}>FAQ</a>
                 </li>
             </ul>
         </nav>
