@@ -16,7 +16,9 @@ export const metadata = {
   description: "Descubre todo sobre la sueroterapia: beneficios, tipos de sueros, aplicaciones terapéuticas y recomendaciones para mejorar tu salud y bienestar de forma segura y efectiva.",
   keywords: "salud, sueroterapia, bienestar, medicina, alternativa",
   locale: "es_Es",
-  type: "website"
+  type: "website",
+  visualViewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 };
 
 export default function RootLayout({ children }) {
