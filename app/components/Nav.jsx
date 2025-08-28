@@ -3,20 +3,20 @@ import { useState, useEffect } from "react"
 
 export default function Nav(){
 
-    // const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    // const toggleMenu = ()=> setIsOpen(!isOpen);
+    const toggleMenu = ()=> setIsOpen(!isOpen);
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', () => {
-    //         const nav = document.getElementById('navbar')
-    //         if(window.scrollY > 0){
-    //             nav.classList.add('sticky')
-    //         }else{
-    //             nav.classList.remove('sticky')
-    //         }
-    //     })
-    // },[])    
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar')
+            if(window.scrollY > 0){
+                nav.classList.add('sticky')
+            }else{
+                nav.classList.remove('sticky')
+            }
+        })
+    },[])    
 
     return(
         <nav id="navbar" className="fixed top-0 left-0 flex justify-between lg:justify-start px-4 py-4 w-full lg:pt-10 lg:pl-10 z-50">

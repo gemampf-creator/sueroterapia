@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
-import Nav from "./components/Nav";
-import Nav2 from "./components/Nav2"
+import Nav2 from "./components/Nav2";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 
 export default function Home() {
-
+  
   const beneficios = [
     {
       name: "Rejuvenecimiento de la piel",
@@ -62,6 +66,8 @@ export default function Home() {
         <div className="order-2 lg:w-1/2 lg:pl-20 lg:pt-20">
           <h2 className="font-bold text-3xl text-center mt lg:w-fit lg:text-4xl">¿Qué es la SUEROTERAPIA?</h2>
           <p className="font-extralight leading-10 text-justify px-4 my-5 md:w-3/4 lg:w-full md:mx-auto lg:mx-0">La sueroterapia implica la administración de una mezcla personalizada de sustancias, vitaminas, fármacos o minerales directamente en el torrente sanguíneo de una vía intravenosa. A diferencia de los suplementos orales, este enfoque permite una absorción más rápida y cimpleta de esos nutrientes esenciales, brindado resulados notables en poco tiempo.</p>
+              <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+    </div>
         </div>
         <Image
           alt="img sueroterapia"
@@ -98,6 +104,27 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="w-full py-10 ">
+          <h2 className="text-3xl font-bold text-center">Podólogia</h2>
+          <p className="text-justify leading-10 mx-5">La podología es la rama de la salud dedicada al estudio, diagnóstico, prevención y tratamiento de las enfermedades y alteraciones que afectan a los pies. Esta disciplina no solo se enfoca en el cuidado estético, sino que también atiende problemas estructurales, funcionales y patológicos que pueden impactar la movilidad y la calidad de vida de las personas.</p>
+                <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.jpg" width={80} height={80}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.jpg" width={400} height={400}/></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.jpg" width={100} height={100}/></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.jpg" width={100} height={100}/></SwiperSlide>
+      </Swiper>
+      </section>
       <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover lg:bg-[url(/img-desktop/orange.png)] lg:bg-cover"></section>
       <section name="faq" id="faq" className="py-5 relative">
         <h2 className="text-3xl font-bold text-center lg:mb-20">FAQ</h2>
@@ -118,7 +145,7 @@ export default function Home() {
           </details>
           <hr className="my-2"/>
           <details className="cursor-pointer text-2xl" name="questions">
-            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Teien efectos secundarios?</summary>
+            <summary className="lg:text-3xl lg:my-5 lg:ml-10">¿Tiene efectos secundarios?</summary>
             <p className="text-justify leading-10 my-5">os efectos secundarios suelen ser leves y poco frecuentes, incluyendo:
               Molestias, enrojecimiento o hematomas en el sitio de punción. Sensación de frío durante la infusión. Raramente mareos leves.</p>
           </details>
