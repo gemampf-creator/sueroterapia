@@ -109,7 +109,7 @@ export default function Home() {
           <p className="text-justify leading-10 mx-5">La podología es la rama de la salud dedicada al estudio, diagnóstico, prevención y tratamiento de las enfermedades y alteraciones que afectan a los pies. Esta disciplina no solo se enfoca en el cuidado estético, sino que también atiende problemas estructurales, funcionales y patológicos que pueden impactar la movilidad y la calidad de vida de las personas.</p>
                 <Swiper
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={10}
         pagination={{
           clickable: true,
         }}
@@ -117,12 +117,10 @@ export default function Home() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.jpg" width={80} height={80}/></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.jpg" width={400} height={400}/></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.jpg" width={100} height={100}/></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.jpg" width={100} height={100}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.png" width={300} height={300}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.png" width={300} height={300}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.png" width={300} height={300}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.png" width={300} height={300}/></SwiperSlide>
       </Swiper>
       </section>
       <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover lg:bg-[url(/img-desktop/orange.png)] lg:bg-cover"></section>
