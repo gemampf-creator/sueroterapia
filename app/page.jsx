@@ -107,7 +107,8 @@ export default function Home() {
       <section className="w-full py-10 ">
           <h2 className="text-3xl font-bold text-center">Podólogia</h2>
           <p className="text-justify leading-10 mx-5">La podología es la rama de la salud dedicada al estudio, diagnóstico, prevención y tratamiento de las enfermedades y alteraciones que afectan a los pies. Esta disciplina no solo se enfoca en el cuidado estético, sino que también atiende problemas estructurales, funcionales y patológicos que pueden impactar la movilidad y la calidad de vida de las personas.</p>
-                <Swiper
+<div className="hidden md:block">
+                  <Swiper
         slidesPerView={3}
         spaceBetween={10}
         pagination={{
@@ -117,11 +118,29 @@ export default function Home() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.png" width={300} height={300}/></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.png" width={300} height={300}/></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.png" width={300} height={300}/></SwiperSlide>
-        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.png" width={300} height={300}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.png" width={500} height={500}/></SwiperSlide>
       </Swiper>
+</div>
+<div className="md:hidden">
+                  <Swiper
+        slidesPerView={2}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-1.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-2.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-3.png" width={500} height={500}/></SwiperSlide>
+        <SwiperSlide><Image alt="img-1" src="/img-mobile/pd-4.png" width={500} height={500}/></SwiperSlide>
+      </Swiper>
+</div>
       </section>
       <section className="w-full h-44 md:h-80 bg-contain bg-no-repeat bg-[url(/img-mobile/orange.png)] md:bg-cover lg:bg-[url(/img-desktop/orange.png)] lg:bg-cover"></section>
       <section name="faq" id="faq" className="py-5 relative">
